@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#163bdc" />
+  <meta name="description" content="Mani Khaniki — software development and artificial intelligence. A personal site with a small debugging playground." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <style>html,body{background:#163bdc;color:#f5f7ff}body{margin:0}[hidden]{display:none!important}</style>
+  <link rel="stylesheet" href="./src/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" />
+  <title>Mani Khaniki — Development & AI</title>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="site">
+    <header class="masthead">
+      <a class="identity" href="mailto:manikhaniki77@gmail.com"><span>Mani Khaniki</span></a>
+      <span class="location">Amsterdam, NL</span>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="greeting">
+        <span class="intro-label">A small idea. One missing connection.</span>
+        <h1 id="greeting" aria-live="polite">Tu<span class="loose-heading-letter">r</span>ning <span class="loose-heading-letter">i</span>de<span class="loose-heading-letter">a</span>s<br />into<br /><span class="greeting-value broken undefined">undefined.</span></h1>
+        <p class="intro-copy" id="intro-copy">I’m Mani. I build software and explore<br />what AI makes possible.</p>
+        <p class="invitation" id="invitation">Can you connect the idea to its result?</p>
+        <a class="hello" href="mailto:manikhaniki77@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+      </section>
+      <section class="debugger" aria-labelledby="debugger-title">
+        <div class="debug-header"><h2 id="debugger-title">idea.js</h2><button class="restart" id="restart" type="button">Start over <span aria-hidden="true">↺</span></button></div>
+        <div class="source-stage">
+        <div class="source" aria-label="Idea source code">
+          <div class="object-lines" id="object-lines">
+          <div class="code-line"><span class="line-number">1</span><code><span class="keyword">const</span> idea = {</code></div>
+          <div class="code-line"><span class="line-number">2</span><code>  result: <span class="string" data-value="result">"working software"</span>,</code></div>
+          <div class="code-line"><span class="line-number">3</span><code>  intent: <span class="string" data-value="intent">"something useful"</span>,</code></div>
+          <div class="code-line editable-property" id="editable-property"><span class="line-number">4</span><code>  <input id="new-key" aria-label="New property name" aria-describedby="property-error" placeholder="yourKey" maxlength="20" autocomplete="off" spellcheck="false" />: "<input id="new-value" aria-label="New property value" aria-describedby="property-error" placeholder="your idea" maxlength="36" autocomplete="off" spellcheck="false" />",</code><span class="visually-hidden" id="property-error" role="status"></span></div>
+          <div class="code-line" id="object-end"><span class="line-number">5</span><code>};</code></div>
+          </div>
+          <div class="code-line"><span class="line-number">6</span><code><span class="keyword">function</span> build(idea) {</code></div>
+          <div class="code-line return-line" id="return-line"><button class="breakpoint" id="breakpoint" type="button" aria-label="Set breakpoint on line 7" aria-pressed="false" title="Set breakpoint on line 7"><span>7</span><i aria-hidden="true"></i></button><code>  <span class="keyword">return</span> idea.<select id="property" aria-label="Property used as the idea’s result"><option value="output" selected>output</option><option value="result">result</option><option value="intent">intent</option></select>;</code></div>
+          <div class="code-line"><span class="line-number">8</span><code>}</code></div>
+          <div class="code-line"><span class="line-number">9</span><code> </code></div>
+          <div class="code-line"><span class="line-number">10</span><code>build(idea);</code></div>
+        </div>
+        <div class="inspection" id="inspection" hidden>
+          <div class="scope-header"><h3>Local scope</h3><span>Paused before line 7</span></div>
+          <dl class="scope"><div><dt>idea.result</dt><dd data-value="result">"working software"</dd></div><div><dt>idea.intent</dt><dd data-value="intent">"something useful"</dd></div><div class="lookup"><dt id="lookup-key">idea.output</dt><dd id="lookup-value">undefined</dd></div></dl>
+        </div>
+        </div>
+        <div class="execution-controls"><button class="run" id="run" type="button"><span aria-hidden="true">⌕</span> Debug</button><button class="step" id="step" type="button" disabled><span aria-hidden="true">↳</span> Step over</button><span class="run-status" id="run-status" role="status">Unexpected output</span></div>
+        <div class="debug-guidance"><span class="guidance-mark" aria-hidden="true">↳</span><p id="guidance" aria-live="polite">Change the property to try a fix. Debug lets you inspect the values.</p></div>
+      </section>
+      <p class="page-note">Software development & artificial intelligence. A little curiosity helps.</p>
+    </main>
+    <footer>
+      <a class="email" href="mailto:manikhaniki77@gmail.com">manikhaniki77@gmail.com</a>
+      <nav aria-label="Contact links"><a href="https://github.com/maxjayne98" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/mahdi-khaniki-8646b5185/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></nav>
+      <span class="footer-note">Made to be explored.</span>
+    </footer>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
